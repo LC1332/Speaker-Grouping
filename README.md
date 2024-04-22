@@ -1,4 +1,4 @@
-# Scalable Speaker Grouping using Speech and Image feature from animation videos
+# Scalable Video Speaker Grouping using Speech and Image feature 
 
 本项目是 [Chat凉宫春日](https://github.com/LC1332/Chat-Haruhi-Suzumiya) 社区的一个子项目，意在建立一个更好的pipeline，能够批量地分离视频的数据，为视频中的每一句话标记上对应的角色，便于给其他的AI模型提供多模态的训练数据。
 
