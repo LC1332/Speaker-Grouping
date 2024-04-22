@@ -9,6 +9,7 @@
 ---
 
 - [引言](#引言)
+- [检测指标](#检测指标)
 - [TODO和成员招募](#TODO和成员招募)
 
 ---
@@ -29,6 +30,33 @@
 
 由此，我们提出了一套新的方法来进行说话人的识别与聚类。1. 我们的方法将同时利用声音和图像的特征进行聚类。 2. 我们的方法是基于学习的，整个方法会在一定数量的视频数据上进行训练，并确定声音和图像的一个置信度模型，对于置信度较高的句子，先行进行聚类。置信度较低的句子后聚类，并且不会因为一些质量较差的句子，把多个类错误地聚合在一起。 3. 标注者只要对聚类后的结果进行较少的人工整理，并且不需要观看整个视频，就可以得到完整的说话人标注，这使得我们规模化地标注视频的说话人数据成为可能。
 
+【如果这个做完之后，其实 还可以根据字幕结合llm自动去诊断说话人，当然这个就属于拓展了】
+
+# 方法
+
+这个方法参考和简化了我们之前的工作
+
+```bibtex
+@inproceedings{he2018merge,
+  title={Merge or not? learning to group faces via imitation learning},
+  author={He, Yue and Cao, Kaidi and Li, Cheng and Loy, Chen},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={32},
+  number={1},
+  year={2018}
+}
+```
+
+
+## 特征的置信度学习
+
+## 两阶段聚类的算法设计
+
+# 检测指标
+
+## Edge-precision, recall, F_1
+
+## 操作次数
 
 # TODO和成员招募
 
