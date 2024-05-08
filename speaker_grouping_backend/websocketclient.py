@@ -9,7 +9,7 @@ def create_connection():
     config.read('config.ini')
     server_ip = config['DEFAULT']['ServerIP']
     server_port = config['DEFAULT']['ServerPort']
-    ws = 0
+    ws = None
     ws_url = f"ws://{server_ip}:{server_port}/ws"
     print(ws_url)
     try:

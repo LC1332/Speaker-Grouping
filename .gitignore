@@ -8838,3 +8838,5 @@ speaker_grouping_backend/content/__MACOSX/._亮剑13.parquet
 speaker_grouping_backend/content/__MACOSX/._亮剑15.parquet
 speaker_grouping_backend/content/__MACOSX/._亮剑20.parquet
 speaker_grouping_backend/构造增量聚类的后台.ipynb
+speaker_grouping_backend/Anno_result/亮剑20_rm_name.parquet.csv
+speaker_grouping_backend/content/亮剑20_rm_name.parquet

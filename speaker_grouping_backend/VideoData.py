@@ -6,6 +6,7 @@ import numpy as np
 from AugmentedUnionFind import AugmentedUnionFind
 
 
+
 class VideoData:
     def __init__(self, inference_table, folder, previous_tables=[]):
 
@@ -314,3 +315,26 @@ class VideoData:
             self.label_row(index, speaker, False)
 
         return self.get_current_table()
+
+    import os
+
+    def extract_path_segment(self, absolute_path):
+        # 使用os.path.split多次分割路径，以获得最后两个目录和文件名
+        head, tail = os.path.split(absolute_path)  # 分割出文件名
+        head, mid = os.path.split(head)            # 分割出中间目录
+        _, last = os.path.split(head)              # 分割出倒数第二个目录
+
+        # 组合最后两级目录和文件名并返回
+        return os.path.join(last, mid, tail)
+
+
+#     get_image_fname( index )
+# 给出index对应图片的绝对目录
+# get_audio_fname( index )
+# 给出index对应音频的绝对目录
+    def get_image_fname( self, index ):
+        return self.extract_path_segment(self.table.at[index, 'screenshot_file'])
+
+    def get_audio_fname( self, index ):
+        return self.extract_path_segment(self.table.at[index, 'audio_file'])
+
